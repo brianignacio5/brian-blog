@@ -2,9 +2,9 @@
   <div class="home">
     <div class="container">
       <section class="hero">
-        <h1 class="hero-title">Welcome to My Blog</h1>
+        <h1 class="hero-title">Welcome to Brian's Blog</h1>
         <p class="hero-subtitle">
-          Exploring web development, Vue.js, TypeScript, and everything in between.
+          I document my journey of learning and building apps and projects here.
         </p>
       </section>
 

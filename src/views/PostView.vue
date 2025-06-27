@@ -11,13 +11,14 @@
               {{ formatDate(post.date) }}
             </time>
             <div class="post-tags">
-              <span 
+              <router-link 
                 v-for="tag in post.tags" 
                 :key="tag" 
-                class="tag"
+                :to="`/tags/${tag}`"
+                class="post-tag"
               >
                 {{ tag }}
-              </span>
+              </router-link>
             </div>
           </div>
           <h1 class="post-title">{{ post.title }}</h1>
@@ -116,11 +117,31 @@ onMounted(async () => {
 
 .post-tag {
   padding: 0.25rem 0.75rem;
-  background: var(--accent-color);
-  color: white;
+  background: #3b82f6;
+  color: #ffffff;
   border-radius: 15px;
   font-size: 0.875rem;
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.post-tag:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .post-tag {
+  background: #60a5fa;
+  color: #ffffff;
+}
+
+.dark .post-tag:hover {
+  background: #3b82f6;
+  color: #ffffff;
 }
 
 .post-content {

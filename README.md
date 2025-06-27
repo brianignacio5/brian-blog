@@ -34,7 +34,7 @@ A modern, responsive blog built with Vue 3, TypeScript, and Markdown. Perfect fo
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/brian-blog.git
+git clone https://github.com/brianignacio5/brian-blog.git
 cd brian-blog
 ```
 

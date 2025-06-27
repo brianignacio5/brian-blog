@@ -1,34 +1,48 @@
 ---
-title: "Building a Markdown Blog with Vue 3"
-description: "Learn how to create a static blog using Vue 3, TypeScript, and Markdown"
+title: "Building a Dark Theme"
+description: "How to implement a dark theme in Vue 3 applications"
 date: "2024-01-20"
-tags: ["vue", "markdown", "tutorial"]
+tags: ["vue", "css", "dark-theme", "ui"]
 ---
 
-# Building a Markdown Blog with Vue 3
+# Building a Dark Theme
 
-In this post, I'll walk you through the process of creating a static blog using Vue 3, TypeScript, and Markdown files.
+Implementing a dark theme in Vue 3 applications is easier than you might think!
 
-## Why This Stack?
+## CSS Custom Properties
 
-- **Vue 3**: Modern reactive framework with excellent TypeScript support
-- **TypeScript**: Type safety and better developer experience
-- **Markdown**: Simple and readable content format
-- **Vite**: Fast build tool with hot module replacement
+The key to a good dark theme is using CSS custom properties (variables):
 
-## Key Components
+```css
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+}
 
-1. **Markdown Parser**: Using `marked` for markdown to HTML conversion
-2. **Frontmatter**: Using `gray-matter` to parse metadata
-3. **Routing**: Vue Router for navigation between posts
-4. **Styling**: CSS with responsive design
+.dark {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+}
+```
 
-## Next Steps
+## Vue 3 Implementation
 
-In future posts, we'll explore:
-- Adding search functionality
-- Implementing categories and tags
-- Adding a dark mode theme
-- Optimizing for SEO
+Using Vue 3's Composition API makes theme management simple:
 
-Stay tuned! 
+```typescript
+const isDark = ref(false)
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  document.documentElement.classList.toggle('dark')
+}
+```
+
+## Benefits
+
+- 🌙 Better user experience
+- 💾 Persistent preferences
+- 🎨 Easy to customize
+- 📱 Works on all devices
+
+Dark themes are becoming the standard for modern web applications! 
