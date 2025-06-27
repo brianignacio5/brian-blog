@@ -42,15 +42,18 @@ function formatDate(dateString: string): string {
 
 <style scoped>
 .post-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-card:hover {
-  border-color: #3b82f6;
+  border-color: var(--accent-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
@@ -58,7 +61,9 @@ function formatDate(dateString: string): string {
 .post-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .post-meta {
@@ -69,7 +74,7 @@ function formatDate(dateString: string): string {
 }
 
 .post-date {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 0.875rem;
 }
 
@@ -79,8 +84,8 @@ function formatDate(dateString: string): string {
 }
 
 .tag {
-  background: #f3f4f6;
-  color: #374151;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -91,20 +96,22 @@ function formatDate(dateString: string): string {
   margin: 0 0 0.75rem 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
 .post-description {
   margin: 0 0 1rem 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .read-more {
-  color: #3b82f6;
+  color: var(--accent-color);
   font-weight: 500;
   font-size: 0.875rem;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {

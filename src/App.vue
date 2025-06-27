@@ -3,7 +3,7 @@ import BlogHeader from './components/BlogHeader.vue'
 </script>
 
 <template>
-  <div id="app">
+  <div class="app-container">
     <BlogHeader />
     <main>
       <router-view />
@@ -24,15 +24,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #374151;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 #app {
   min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
 }
 
 main {
   flex: 1;
+  background-color: var(--bg-primary);
 }
 
 a {

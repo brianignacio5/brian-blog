@@ -49,14 +49,13 @@ onMounted(async () => {
 <style scoped>
 .posts {
   min-height: 100vh;
-  background: #f9fafb;
-  padding: 2rem 0;
+  background: var(--bg-secondary);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .page-header {
@@ -67,36 +66,40 @@ onMounted(async () => {
 .page-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
 }
 
 .page-subtitle {
   font-size: 1.125rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .loading {
   text-align: center;
   padding: 4rem 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1.125rem;
 }
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
 }
 
 .no-posts {
   text-align: center;
   padding: 4rem 0;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
   .page-title {
     font-size: 2rem;
   }

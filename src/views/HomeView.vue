@@ -71,13 +71,13 @@ onMounted(async () => {
 <style scoped>
 .home {
   min-height: 100vh;
-  background: #f9fafb;
+  background: var(--bg-secondary);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .hero {
@@ -88,13 +88,13 @@ onMounted(async () => {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
   margin: 0 0 1rem 0;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 0;
   max-width: 600px;
   margin: 0 auto;
@@ -103,7 +103,7 @@ onMounted(async () => {
 .section-title {
   font-size: 2rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text-primary);
   margin: 0 0 2rem 0;
 }
 
@@ -114,13 +114,13 @@ onMounted(async () => {
 .loading {
   text-align: center;
   padding: 2rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1.125rem;
 }
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -132,7 +132,7 @@ onMounted(async () => {
 .view-all-link {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #3b82f6;
+  background: var(--accent-color);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -141,7 +141,7 @@ onMounted(async () => {
 }
 
 .view-all-link:hover {
-  background: #2563eb;
+  background: var(--accent-hover);
 }
 
 .tags-section {
@@ -156,8 +156,8 @@ onMounted(async () => {
 
 .tag-link {
   padding: 0.5rem 1rem;
-  background: #e5e7eb;
-  color: #374151;
+  background: var(--border-color);
+  color: var(--text-primary);
   text-decoration: none;
   border-radius: 20px;
   font-size: 0.875rem;
@@ -166,11 +166,15 @@ onMounted(async () => {
 }
 
 .tag-link:hover {
-  background: #3b82f6;
+  background: var(--accent-color);
   color: white;
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
   .hero-title {
     font-size: 2rem;
   }
